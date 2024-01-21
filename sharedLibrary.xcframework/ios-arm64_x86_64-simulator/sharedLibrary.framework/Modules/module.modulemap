@@ -1,0 +1,6 @@
+framework module sharedLibrary {
+    umbrella header "sharedLibrary.h"
+
+    export *
+    module * { export * }
+}
