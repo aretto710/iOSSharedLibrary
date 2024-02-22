@@ -6,9 +6,9 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class SharedLibraryKotlinEnumCompanion, SharedLibraryKotlinEnum<E>, SharedLibraryEnvironment, SharedLibraryKotlinArray<T>, NSObject, SharedLibraryLoginRequestCompanion, SharedLibraryLoginRequest, SharedLibraryParticipante, SharedLibraryPerfil, SharedLibraryLoginResponseCompanion, SharedLibraryLoginResponse, SharedLibraryLoginType, SharedLibrarySplashRequest, SharedLibraryParticipanteCompanion, SharedLibraryPerfilCompanion, SharedLibrarySplashRequestVersion, SharedLibrarySplashRequestCompanion, SharedLibrarySplashRequestVersionCompanion, SharedLibrarySplashResponseVersion, SharedLibrarySplashResponseCompanion, SharedLibrarySplashResponse, SharedLibrarySplashResponseVersionCompanion, SharedLibraryUrlResponseCompanion, SharedLibraryUrlResponse, SharedLibraryKotlinThrowable, SharedLibraryKotlinException, SharedLibraryKotlinRuntimeException, SharedLibraryKotlinIllegalStateException, SharedLibraryKotlinx_serialization_coreSerializersModule, SharedLibraryKotlinx_serialization_coreSerialKind, SharedLibraryKotlinNothing;
+@class SharedLibraryKotlinEnumCompanion, SharedLibraryKotlinEnum<E>, SharedLibraryEnvironment, SharedLibraryKotlinArray<T>, NSObject, SharedLibraryLoginRequestCompanion, SharedLibraryLoginRequest, SharedLibraryParticipante, SharedLibraryPerfil, SharedLibraryLoginResponseCompanion, SharedLibraryLoginResponse, SharedLibraryLoginType, SharedLibrarySplashRequest, SharedLibraryNetworkUtils, SharedLibraryParticipanteCompanion, SharedLibraryPerfilCompanion, SharedLibrarySplashRequestVersion, SharedLibrarySplashRequestCompanion, SharedLibrarySplashRequestVersionCompanion, SharedLibrarySplashResponseVersion, SharedLibrarySplashResponseCompanion, SharedLibrarySplashResponse, SharedLibrarySplashResponseVersionCompanion, SharedLibraryUrlResponseCompanion, SharedLibraryUrlResponse, SharedLibraryKotlinThrowable, SharedLibraryKotlinException, SharedLibraryKotlinRuntimeException, SharedLibraryKotlinIllegalStateException, SharedLibraryKotlinx_serialization_coreSerializersModule, SharedLibraryKotlinx_serialization_coreSerialKind, SharedLibraryKotlinNothing;
 
-@protocol SharedLibraryKotlinComparable, SharedLibraryPlatform, SharedLibraryKotlinx_serialization_coreKSerializer, SharedLibraryMultiplatform_settingsSettings, SharedLibraryKotlinIterator, SharedLibraryKotlinx_serialization_coreEncoder, SharedLibraryKotlinx_serialization_coreSerialDescriptor, SharedLibraryKotlinx_serialization_coreSerializationStrategy, SharedLibraryKotlinx_serialization_coreDecoder, SharedLibraryKotlinx_serialization_coreDeserializationStrategy, SharedLibraryKotlinx_serialization_coreCompositeEncoder, SharedLibraryKotlinAnnotation, SharedLibraryKotlinx_serialization_coreCompositeDecoder, SharedLibraryKotlinx_serialization_coreSerializersModuleCollector, SharedLibraryKotlinKClass, SharedLibraryKotlinKDeclarationContainer, SharedLibraryKotlinKAnnotatedElement, SharedLibraryKotlinKClassifier;
+@protocol SharedLibraryKotlinComparable, SharedLibraryPlatform, SharedLibraryKotlinx_serialization_coreKSerializer, SharedLibraryKotlinIterator, SharedLibraryKotlinx_serialization_coreEncoder, SharedLibraryKotlinx_serialization_coreSerialDescriptor, SharedLibraryKotlinx_serialization_coreSerializationStrategy, SharedLibraryKotlinx_serialization_coreDecoder, SharedLibraryKotlinx_serialization_coreDeserializationStrategy, SharedLibraryKotlinx_serialization_coreCompositeEncoder, SharedLibraryKotlinAnnotation, SharedLibraryKotlinx_serialization_coreCompositeDecoder, SharedLibraryKotlinx_serialization_coreSerializersModuleCollector, SharedLibraryKotlinKClass, SharedLibraryKotlinKDeclarationContainer, SharedLibraryKotlinKAnnotatedElement, SharedLibraryKotlinKClassifier;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -330,7 +330,37 @@ __attribute__((swift_name("Network")))
  * Other uncaught Kotlin exceptions are fatal.
 */
 - (void)splashRequest:(SharedLibrarySplashRequest *)request completionHandler:(void (^)(SharedLibraryLoginType * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("splash(request:completionHandler:)")));
-@property (readonly) id<SharedLibraryMultiplatform_settingsSettings> settings __attribute__((swift_name("settings")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("NetworkUtils")))
+@interface SharedLibraryNetworkUtils : SharedLibraryBase
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+@end
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("NetworkUtils.Endpoints")))
+@interface SharedLibraryNetworkUtilsEndpoints : SharedLibraryBase
+- (instancetype)initWith:(SharedLibraryNetworkUtils *)receiver __attribute__((swift_name("init(_:)"))) __attribute__((objc_designated_initializer));
+- (NSString *)countries __attribute__((swift_name("countries()")));
+- (NSString *)jobs __attribute__((swift_name("jobs()")));
+- (NSString *)listCountryPrefxis __attribute__((swift_name("listCountryPrefxis()")));
+- (NSString *)login __attribute__((swift_name("login()")));
+- (NSString *)logout __attribute__((swift_name("logout()")));
+- (NSString *)privacyPolicy __attribute__((swift_name("privacyPolicy()")));
+- (NSString *)recoverPassword __attribute__((swift_name("recoverPassword()")));
+- (NSString *)register __attribute__((swift_name("register()")));
+- (NSString *)registerCompany __attribute__((swift_name("registerCompany()")));
+- (NSString *)registerPerson __attribute__((swift_name("registerPerson()")));
+- (NSString *)relationship __attribute__((swift_name("relationship()")));
+- (NSString *)resetPassword __attribute__((swift_name("resetPassword()")));
+- (NSString *)splash __attribute__((swift_name("splash()")));
+- (NSString *)validateDoc __attribute__((swift_name("validateDoc()")));
+- (NSString *)validateEmail __attribute__((swift_name("validateEmail()")));
+- (NSString *)validateEmailAndNumber __attribute__((swift_name("validateEmailAndNumber()")));
+- (NSString *)validateNumber __attribute__((swift_name("validateNumber()")));
+- (NSString *)verifyEmail __attribute__((swift_name("verifyEmail()")));
 @end
 
 
@@ -405,7 +435,7 @@ __attribute__((swift_name("SecurexFlow")))
  * @note This method converts instances of CancellationException to errors.
  * Other uncaught Kotlin exceptions are fatal.
 */
-- (void)doInitAppEnvironment:(SharedLibraryEnvironment *)environment completionHandler:(void (^)(SharedLibraryLoginType * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("doInitApp(environment:completionHandler:)")));
+- (void)doInitAppEnvironment:(SharedLibraryEnvironment *)environment appVersion:(NSString *)appVersion uuid:(NSString *)uuid completionHandler:(void (^)(SharedLibraryLoginType * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("doInitApp(environment:appVersion:uuid:completionHandler:)")));
 @end
 
 
@@ -672,34 +702,6 @@ __attribute__((swift_name("KotlinCancellationException")))
 - (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithCause:(SharedLibraryKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithMessage:(NSString * _Nullable)message cause:(SharedLibraryKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
-@end
-
-__attribute__((swift_name("Multiplatform_settingsSettings")))
-@protocol SharedLibraryMultiplatform_settingsSettings
-@required
-- (void)clear __attribute__((swift_name("clear()")));
-- (BOOL)getBooleanKey:(NSString *)key defaultValue:(BOOL)defaultValue __attribute__((swift_name("getBoolean(key:defaultValue:)")));
-- (SharedLibraryBoolean * _Nullable)getBooleanOrNullKey:(NSString *)key __attribute__((swift_name("getBooleanOrNull(key:)")));
-- (double)getDoubleKey:(NSString *)key defaultValue:(double)defaultValue __attribute__((swift_name("getDouble(key:defaultValue:)")));
-- (SharedLibraryDouble * _Nullable)getDoubleOrNullKey:(NSString *)key __attribute__((swift_name("getDoubleOrNull(key:)")));
-- (float)getFloatKey:(NSString *)key defaultValue:(float)defaultValue __attribute__((swift_name("getFloat(key:defaultValue:)")));
-- (SharedLibraryFloat * _Nullable)getFloatOrNullKey:(NSString *)key __attribute__((swift_name("getFloatOrNull(key:)")));
-- (int32_t)getIntKey:(NSString *)key defaultValue:(int32_t)defaultValue __attribute__((swift_name("getInt(key:defaultValue:)")));
-- (SharedLibraryInt * _Nullable)getIntOrNullKey:(NSString *)key __attribute__((swift_name("getIntOrNull(key:)")));
-- (int64_t)getLongKey:(NSString *)key defaultValue:(int64_t)defaultValue __attribute__((swift_name("getLong(key:defaultValue:)")));
-- (SharedLibraryLong * _Nullable)getLongOrNullKey:(NSString *)key __attribute__((swift_name("getLongOrNull(key:)")));
-- (NSString *)getStringKey:(NSString *)key defaultValue:(NSString *)defaultValue __attribute__((swift_name("getString(key:defaultValue:)")));
-- (NSString * _Nullable)getStringOrNullKey:(NSString *)key __attribute__((swift_name("getStringOrNull(key:)")));
-- (BOOL)hasKeyKey:(NSString *)key __attribute__((swift_name("hasKey(key:)")));
-- (void)putBooleanKey:(NSString *)key value:(BOOL)value __attribute__((swift_name("putBoolean(key:value:)")));
-- (void)putDoubleKey:(NSString *)key value:(double)value __attribute__((swift_name("putDouble(key:value:)")));
-- (void)putFloatKey:(NSString *)key value:(float)value __attribute__((swift_name("putFloat(key:value:)")));
-- (void)putIntKey:(NSString *)key value:(int32_t)value __attribute__((swift_name("putInt(key:value:)")));
-- (void)putLongKey:(NSString *)key value:(int64_t)value __attribute__((swift_name("putLong(key:value:)")));
-- (void)putStringKey:(NSString *)key value:(NSString *)value __attribute__((swift_name("putString(key:value:)")));
-- (void)removeKey:(NSString *)key __attribute__((swift_name("remove(key:)")));
-@property (readonly) NSSet<NSString *> *keys __attribute__((swift_name("keys")));
-@property (readonly) int32_t size __attribute__((swift_name("size")));
 @end
 
 __attribute__((swift_name("KotlinIterator")))
